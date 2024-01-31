@@ -1,1 +1,37 @@
+节点的定义：
+class Node:
+def __init__(self,item):
+    self.item = item
+    self.next = None
+单链表类的定义：
+class SingleLinkList():
+    def__init__(self,node = None):
+        self.__head = node # 这里使用私有变量的原因在内部操作即可，不需要在类外面作用
+    def is_empty(self):#判断是否为空链表
+    return self._head == None
+    def length(self):# 链表长度
+    cur = self._head 
+    count = 0
+    while cur != None:
+    count += 1
+    cur = cur.next
+    return count
+    def travel(self):# 遍历链表
+    cur = self._head
+    while cur != None:
+    print(cur.ele,end= "")
+    cur = cur.next
+    def append(self,item):
+    node = Node(item)
+    if self._empty():
+        self._head = None
+    else:
+        cur = self._head
+        while cur != None:
+            cur = cur.next
+        cur.next = node
+    
+
+
+
 
